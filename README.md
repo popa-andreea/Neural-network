@@ -15,7 +15,7 @@ learning_rate reprezinta rata de invatare
 - calculam acuratetea;
 - afisam grafic dreapta de decizie: [x, y] * [W[0], W[1]] + b = 0.
 
-train_neural_networks(X, y, epochs, learning_rate, no_hidden, no_out)
+train_neural_network(X, y, epochs, learning_rate, no_hidden, no_out)
 -
 X si y reprezinta datele de antrenare, respectiv etichetele acestora
 
