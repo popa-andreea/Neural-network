@@ -43,11 +43,14 @@ def train_perceptron(X, y, epochs, learning_rate):
         for i in range(no_samps):
             y_hat = np.dot(X[i][:],W) + bias
             loss = (y_hat - y[i]) ** 2
+            
             W = W - learning_rate * (y_hat - y[i]) * X[i][:]
             bias = bias - learning_rate * (y_hat - y[i])
+            
             accuracy = np.mean(np.sign(np.dot(X, W) + bias) == y)
-            #print("sample loss:", loss, "accuracy:", accuracy)
-    plot_decision_boundary(X, y, W, bias, X[i][:], y[i])
+            print("sample loss:", loss, "accuracy:", accuracy)
+            
+            plot_decision_boundary(X, y, W, bias, X[i][:], y[i])
     return W, bias, accuracy
 
 W, bias, accuracy = train_perceptron(X, y, epochs, learning_rate)
@@ -128,7 +131,7 @@ def train_neural_network(X, y, epochs, learning_rate, no_hidden, no_out):
         z1, a1, z2, a2 = forward(X, W1, W2, b1, b2)
         loss = -(y * np.log(a2) + (1 - y) * np.log(1 - a2)).mean()
         accuracy = (np.round(a2) == y).mean()
-        #print("loss:", loss, "accuracy:", accuracy)
+        print("loss:", loss, "accuracy:", accuracy)
 
         dw1, db1, dw2, db2 = backward(a1, a2, z1, z2, X, y, no_samps)
 
@@ -137,7 +140,7 @@ def train_neural_network(X, y, epochs, learning_rate, no_hidden, no_out):
         W2 -= dw2 * learning_rate
         b2 -= db2 * learning_rate
 
-        #plot_decision(X, W1, W2, b1, b2)
+        plot_decision(X, W1, W2, b1, b2)
 
     return W1, b1, W2, b2, accuracy
 
