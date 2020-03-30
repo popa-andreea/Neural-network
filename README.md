@@ -2,8 +2,10 @@
 
 train_perceptron(X, y, epcochs, learning_rate)
 -
-X si y reprezinta datele de antrenare, respectiv etichetele acestora
+X si y reprezinta datele de antrenare, respectiv etichetele acestora 
+
 epochs reprezinta numarul de epoci
+
 learning_rate reprezinta rata de invata
 - initializam ponderile (W) cu un vector de 0-uri si bias-ul cu 0;
 - pentru fiecare epoca, amestecam datele de antrenare;
@@ -16,9 +18,13 @@ learning_rate reprezinta rata de invata
 train_neural_networks(X, y, epochs, learning_rate, no_hidden, no_out)
 -
 X si y reprezinta datele de antrenare, respectiv etichetele acestora
+
 epochs reprezinta numarul de epoci
+
 learning_rate reprezinta rata de invata
+
 no_hidden reprezinta numarul de nereroni al stratului ascuns
+
 no_out reprezinta numarul de nereuroni al predictiei (output-ului)
 - initializam aleator ponderile si bias-ul cu valori mici aproape de 0;
 - pentru fiecare epoca, amestecam datele;
