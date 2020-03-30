@@ -31,8 +31,11 @@ no_out reprezinta numarul de neuroni al predictiei (output-ului)
 - calculam cu ajurotul metodei forward pentru fiecare strat valoarea lui z (z = X * W + bias) si valoarea lui a (a = f(z), unde f reprezinta functia de activare), iar valoarea finala a lui a reprezinta predictia retelei (output-ul);
 - calculam valorea functiei de eroare si acuratetea;
 - calculam cu ajutorul metodei backward derivata functiei de eroare pe directiile ponderilor, respectiv a fiecarui bias folosind regula de inlantuire: 
-X, W1, b1 -> z1 -> f(z1) = a1
-a1, W2, b2 -> z2 -> f(z2) = a2 (output)
-a2, y -> loss;
+
+  X, W1, b1 -> z1 -> f(z1) = a1
+
+  a1, W2, b2 -> z2 -> f(z2) = a2 (output)
+
+  a2, y -> loss;
 - actualizam proportional poderile si bias-urile cu negativul mediei derivatelor din batch;
 - afisam grafic functia de decizie.
