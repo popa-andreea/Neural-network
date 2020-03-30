@@ -6,7 +6,7 @@ X si y reprezinta datele de antrenare, respectiv etichetele acestora
 
 epochs reprezinta numarul de epoci
 
-learning_rate reprezinta rata de invata
+learning_rate reprezinta rata de invatare
 - initializam ponderile (W) cu un vector de 0-uri si bias-ul cu 0;
 - pentru fiecare epoca, amestecam datele de antrenare;
 - pentru fiecare exemplu x din datele de antrenare, calculam predictia (y_hat) dupa formula: x * W + bias;
@@ -21,11 +21,11 @@ X si y reprezinta datele de antrenare, respectiv etichetele acestora
 
 epochs reprezinta numarul de epoci
 
-learning_rate reprezinta rata de invata
+learning_rate reprezinta rata de invatare
 
-no_hidden reprezinta numarul de nereroni al stratului ascuns
+no_hidden reprezinta numarul de neuroni al stratului ascuns
 
-no_out reprezinta numarul de nereuroni al predictiei (output-ului)
+no_out reprezinta numarul de neuroni al predictiei (output-ului)
 - initializam aleator ponderile si bias-ul cu valori mici aproape de 0;
 - pentru fiecare epoca, amestecam datele;
 - calculam cu ajurotul metodei forward pentru fiecare strat valoarea lui z (z = X * W + bias) si valoarea lui a (a = f(z), unde f reprezinta functia de activare), iar valoarea finala a lui a reprezinta predictia retelei (output-ul);
